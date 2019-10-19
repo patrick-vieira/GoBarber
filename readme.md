@@ -69,4 +69,4 @@ debug
     para verificar o token usamos a função jwt.verify que precisa de um calback, para não precisar de um calback podemos usar o  promisify que transforma uma função de calback em async/await, essa função tenta decodificar o token usando o mesmo secret, retornando o payload
 
   - validação dos dados de entrada:
-  lib yup para validar o schema
+  lib yup para validar o schema com checagens condicionais, ex quando o password é alterado, verificar se enviou o oldpassword e se a confirmação do novo é igual ao novo.
