@@ -61,4 +61,12 @@ debug
     yarn add jsonwebtoken
 
   session controler:
-  - cria sessões de usuarios.
+  - verifica se usuario existe e se a senha esta correta
+  - cria e retorna a sessão do usuario como jwtToken
+
+  bloqueando rotas para usuarios não autenticados:
+  - middleware de autenticação 
+    para verificar o token usamos a função jwt.verify que precisa de um calback, para não precisar de um calback podemos usar o  promisify que transforma uma função de calback em async/await, essa função tenta decodificar o token usando o mesmo secret, retornando o payload
+
+  - validação dos dados de entrada:
+  lib yup para validar o schema
